@@ -62,7 +62,7 @@ const Hero = () => {
         </div>
         <button
           id="work"
-          onClick={() => (window.location.href = "tel:+923001234567")}
+          onClick={() => (window.location.href = "tel:+923181512749")}
           className="bg-white font-semibold cursor-pointer hover:bg-black hover:text-white transition-all duration-200 px-[20px] py-[8px] w-fit mx-auto rounded-[40px]"
         >
           Get in touch
