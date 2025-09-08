@@ -5,6 +5,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import { toast } from "react-toastify";
 import { FaCheck } from "react-icons/fa6";
 import { useState } from "react";
+import { h1 } from "framer-motion/client";
 
 const About = () => {
   const [copied, setCopied] = useState(false);
@@ -122,7 +123,10 @@ const About = () => {
                     </span>
                   )}
                 </div>
-                <button className="cursor-pointer">Copy Email</button>
+
+                <button className="cursor-pointer">
+                  {!copied ? <h1>Copy Email</h1> : <h1>Copied!</h1>}
+                </button>
               </div>
             </div>
           </div>
