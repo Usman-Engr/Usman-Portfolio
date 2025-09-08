@@ -5,7 +5,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import { toast } from "react-toastify";
 import { FaCheck } from "react-icons/fa6";
 import { useState } from "react";
-import { h1 } from "framer-motion/client";
+import { FaWhatsapp } from "react-icons/fa";
 
 const About = () => {
   const [copied, setCopied] = useState(false);
@@ -24,6 +24,7 @@ const About = () => {
       setCopied(false);
     }, 2500);
   };
+  const whatsappNumber = "923181512749";
 
   return (
     <div
@@ -99,34 +100,32 @@ const About = () => {
                 Lets have a chat about your next project or idea!
               </p>
             </div>
-            <div className="flex gap-3">
-              <button
-                onClick={() => (window.location.href = "tel:+923181512749")}
-                className="bg-white text-black hover:bg-black hover:text-white cursor-pointer transition-all duration-200 px-[12px] py-[6px] rounded-[40px] w-fit"
+            <div className="flex flex-col justify-between sm:justify-start items-start sm:flex-row gap-3">
+              <a
+                href={`https://wa.me/${whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-center justify-center gap-2 bg-green-500 text-white hover:bg-green-600 cursor-pointer transition-all duration-200 px-[12px] py-[6px] rounded-[40px] w-full sm:w-fit"
               >
-                Book a Call
-              </button>
+                <FaWhatsapp size={18} />
+                WhatsApp
+              </a>
               <div
                 onClick={handleClick}
-                className={`flex items-center gap-2 cursor-pointer transition-all duration-300 px-[12px] py-[6px] rounded-[40px] w-fit ${
+                className={`flex items-center justify-center gap-2 cursor-pointer transition-all duration-200 px-[12px] py-[6px] rounded-[40px] w-full sm:w-fit ${
                   !copied ? "bg-white text-black" : "bg-black text-white"
                 }`}
               >
-                <div>
-                  {!copied ? (
-                    <span>
-                      <IoCopyOutline />
-                    </span>
-                  ) : (
-                    <span>
-                      <FaCheck />
-                    </span>
-                  )}
-                </div>
-
-                <button className="cursor-pointer">
-                  {!copied ? <h1>Copy Email</h1> : <h1>Copied!</h1>}
-                </button>
+                {/* Icon */}
+                {!copied ? (
+                  <IoCopyOutline className="text-lg" />
+                ) : (
+                  <FaCheck className="text-lg" />
+                )}
+                {/* Text */}
+                <span className="text-center sm:w-auto">
+                  {!copied ? "Copy Email" : "Copied!"}
+                </span>
               </div>
             </div>
           </div>

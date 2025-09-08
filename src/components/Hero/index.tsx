@@ -34,15 +34,16 @@ const Hero = () => {
       link: "https://er201-web-developed-by-usman-basharat.netlify.app/",
     },
   ];
+  const whatsappNumber = "923181512749";
 
   return (
     <div className="w-full h-[130vh] bg-image flex flex-col gap-10 items-center justify-center ">
       <div className="flex flex-col gap-[62px] mt-10">
         <div className="w-full flex flex-col gap-10 mt-35">
-          <h1 className="text-[49px] lg:text-[59px] font-[500] text-center leading-[1.2] px-1">
+          <h1 className="text-[30px] lg:text-[59px] font-[500] text-center leading-[1.2] px-1">
             Software{" "}
             <ReactTyped
-              strings={["Developer", "Engineer", "Creator", "Problem Solver"]}
+              strings={["Developer", "Engineer", "Creator"]}
               typeSpeed={100}
               backSpeed={50}
               loop={true}
@@ -54,19 +55,20 @@ const Hero = () => {
           <div>
             <h1 className="text-center text-[#000000b3] w-[90%] lg:w-[48%] xl:w-[51%] mx-auto">
               I’m a software developer specializing in building sleek,
-              functional web and mobile applications. With a passion for clean
-              code and user-centric design, I turn ideas into digital
-              experiences that work beautifully and deliver results.
+              functional web applications. With a passion for clean code and
+              user-centric design, I turn ideas into digital experiences that
+              work beautifully and deliver results.
             </h1>
           </div>
         </div>
-        <button
+        <a
+          href={`https://wa.me/${whatsappNumber}`}
+          target="_blank"
           id="work"
-          onClick={() => (window.location.href = "tel:+923181512749")}
           className="bg-white font-semibold cursor-pointer hover:bg-black hover:text-white transition-all duration-200 px-[20px] py-[8px] w-fit mx-auto rounded-[40px]"
         >
           Get in touch
-        </button>
+        </a>
       </div>
 
       {/* ✅ Render cards dynamically from array */}
