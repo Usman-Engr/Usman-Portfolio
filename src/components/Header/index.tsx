@@ -67,7 +67,10 @@ const Header = () => {
 
           {/* Connect + Hamburger */}
           <div className="flex items-center gap-2">
-            <button className="bg-[#ffec80] text-sm sm:text-[16px] text-black hover:bg-black hover:text-white transition-all duration-200 py-[2px] px-[10px] sm:py-[6px] sm:px-[20px] rounded-[40px]">
+            <button
+              onClick={() => (window.location.href = "tel:+923181512749")}
+              className="bg-[#ffec80] text-sm sm:text-[16px] text-black hover:bg-black hover:text-white transition-all duration-200 py-[2px] px-[10px] sm:py-[6px] sm:px-[20px] rounded-[40px]"
+            >
               Connect
             </button>
             <div className="transition-all duration-300">
