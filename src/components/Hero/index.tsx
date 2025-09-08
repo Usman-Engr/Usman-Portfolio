@@ -47,7 +47,8 @@ const Hero = () => {
               typeSpeed={100}
               backSpeed={50}
               loop={true}
-              showCursor={true}
+              showCursor={false}
+              className="text-orange-500"
             />
             <br />
             <span className="text-center">Web Application</span>
