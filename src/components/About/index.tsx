@@ -99,7 +99,10 @@ const About = () => {
               </p>
             </div>
             <div className="flex gap-3">
-              <button className="bg-white text-black hover:bg-black hover:text-white cursor-pointer transition-all duration-200 px-[12px] py-[6px] rounded-[40px] w-fit">
+              <button
+                onClick={() => (window.location.href = "tel:+923181512749")}
+                className="bg-white text-black hover:bg-black hover:text-white cursor-pointer transition-all duration-200 px-[12px] py-[6px] rounded-[40px] w-fit"
+              >
                 Book a Call
               </button>
               <div
